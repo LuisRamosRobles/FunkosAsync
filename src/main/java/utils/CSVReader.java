@@ -24,8 +24,6 @@ public class CSVReader extends Thread {
 
             String archivoCsv = System.getProperty("user.dir") + "/data/funkos.csv";
 
-            List<Funko> listFunkos = new ArrayList<>();
-
             try(BufferedReader lector = new BufferedReader(new FileReader(archivoCsv))){
                 Stream<Funko> funkos = lector.lines().skip(1)
                         .map(linea -> linea.split(","))
@@ -38,8 +36,6 @@ public class CSVReader extends Thread {
                                 .build()
                         );
                 funkos.forEach(System.out::println);
-                Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                System.out.println(gson.toJson(funkos));
             }catch(IOException e){
                 System.err.println("Error en lectura de archivo: " + e.getMessage());
             }
