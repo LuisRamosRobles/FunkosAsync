@@ -1,12 +1,12 @@
 package org.example;
 
-import utils.CSVReader;
+import utils.CSVLector;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        CSVReader lectorCSV = new CSVReader();
+        CSVLector lectorCSV = new CSVLector();
         lectorCSV.start();
 
         try{

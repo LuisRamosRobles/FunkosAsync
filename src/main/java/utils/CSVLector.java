@@ -1,20 +1,15 @@
 package utils;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import models.Funko;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;
 
-public class CSVReader extends Thread {
+public class CSVLector extends Thread {
 
     @Override
     public void run(){
