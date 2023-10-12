@@ -1,42 +1,20 @@
 package models;
 
+import lombok.Builder;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.UUID;
-
+@Data
+@Builder
 public class Funko {
+
     private final UUID cod;
     private final String nombre;
     private final String modelo;
     private final double precio;
     private final LocalDate fechaLanzamiento;
 
-    public Funko(UUID cod, String nombre, String modelo, double precio, LocalDate fechaLanzamiento) {
-        this.cod = cod;
-        this.nombre = nombre;
-        this.modelo = modelo;
-        this.precio = precio;
-        this.fechaLanzamiento = fechaLanzamiento;
-    }
-
-    public UUID getCod() {
-        return cod;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public LocalDate getFechaLanzamiento() {
-        return fechaLanzamiento;
-    }
 
     @Override
     public String toString() {
